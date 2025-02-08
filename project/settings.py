@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from pathlib import Path
 from dj_database_url import parse as dburl
-import firebase_admin
-from firebase_admin import credentials, messaging
+import pymysql
+pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -117,14 +117,44 @@ CHANNEL_LAYERS = {
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
          
-
-
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'djangoapi',  # Your database name
+#         'USER': 'mohamdfateh',         # Your MySQL username
+#         'PASSWORD': 'Sniper2011### ',  # Your MySQL password
+#         'HOST': 'SG-four-pilot-5427django-11736-mysql-master.servers.mongodirector.com',    # Use '127.0.0.1' or actual MySQL server
+#         'PORT': '3306',         # Default MySQL port
+#         'OPTIONS': {
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#         }
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres.hcdmzfyozdstrudbbqcu',
+        'PASSWORD': 'Sniper2011###',
+        'HOST': 'aws-0-eu-central-1.pooler.supabase.com',
+        'PORT': '5432',
+         'OPTIONS': {
+            'client_encoding': 'UTF8',
+        }
     }
 }
+# user=postgres.hcdmzfyozdstrudbbqcu 
+# password=[YOUR-PASSWORD] 
+# host=aws-0-eu-central-1.pooler.supabase.com
+# port=5432
+# dbname=postgres
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
