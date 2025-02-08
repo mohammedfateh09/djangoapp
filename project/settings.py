@@ -18,8 +18,8 @@ from firebase_admin import credentials, messaging
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-cred = credentials.Certificate("firebase-adminsdk.json")
-firebase_admin.initialize_app(cred)
+# cred = credentials.Certificate("firebase-adminsdk.json")
+# firebase_admin.initialize_app(cred)
 
 
 # Quick-start development settings - unsuitable for production
