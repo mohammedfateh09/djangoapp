@@ -130,31 +130,31 @@ CHANNEL_LAYERS = {
 #         }
 #     }
 # }
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres.hcdmzfyozdstrudbbqcu',
-        'PASSWORD': 'Sniper2011###',
-        'HOST': 'aws-0-eu-central-1.pooler.supabase.com',
-        'PORT': '5432',
-         'OPTIONS': {
-            'client_encoding': 'UTF8',
-        }
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'postgres.hcdmzfyozdstrudbbqcu',
+#         'PASSWORD': 'Sniper2011###',
+#         'HOST': 'aws-0-eu-central-1.pooler.supabase.com',
+#         'PORT': '5432',
+#          'OPTIONS': {
+#             'client_encoding': 'UTF8',
+#         }
+#     }
+# }
 # user=postgres.hcdmzfyozdstrudbbqcu 
 # password=[YOUR-PASSWORD] 
 # host=aws-0-eu-central-1.pooler.supabase.com
 # port=5432
 # dbname=postgres
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # Password validation
